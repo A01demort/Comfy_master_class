@@ -104,6 +104,10 @@ RUN echo '📁 커스텀 노드 및 의존성 설치 시작' && \
     pip install bitsandbytes xformers || echo '⚠️ bitsandbytes 또는 xformers 설치 실패'
 
 
+# a01demort 설치 스크립트 복사
+RUN mkdir -p /workspace/ComfyUI/scripts
+COPY a01demort_install.sh /workspace/ComfyUI/scripts/a01demort_install.sh
+    
 # 볼륨 마운트
 VOLUME ["/workspace"]
 
